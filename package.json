@@ -1,0 +1,38 @@
+{
+  "name": "plop-components",
+  "version": "0.1.0",
+  "description": "Simple generator to scaffold React components",
+  "main": "index.js",
+  "bin": {
+    "plop-components": "./index.js"
+  },
+  "scripts": {
+    "test": "standard './plopfile.js'",
+    "format": "prettier-standard './plopfile.js'"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "linters": {
+      "./plopfile.js": [
+        "prettier-standard",
+        "git add"
+      ]
+    }
+  },
+  "prettier": {},
+  "author": "Torsten Walter <developer@nerdgore.de>",
+  "license": "GNU GENERAL PUBLIC LICENSEv3",
+  "dependencies": {
+    "node-dir": "^0.1.17",
+    "plop": "~2.1.0"
+  },
+  "devDependencies": {
+    "husky": "^0.15.0-rc.13",
+    "lint-staged": "^7.2.2",
+    "prettier-standard": "^8.0.1"
+  }
+}
